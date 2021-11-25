@@ -1,15 +1,17 @@
 import React from 'react';
 import ColorChange from './colorChange';
+import Project from './project';
 
 function Portfolio({currentState, changeCurrentState}) {
     return (
-    <div id="contentContainer" data-label="portfolio" class="contentContainer contain portfolio">
+    <div id="contentContainer" class="contentContainer contain portfolio">
         <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
-            <h2 id="grabLabel" class="portfolioPage">Portfolio</h2>
+            <h2 id="grabLabel" class="portfolioPage">Portfolio State</h2>
             <p class="spacer">Here is my Portfolio.</p>
             <ul class="list-group">
+                <Project currentState={currentState} changeCurrentState={changeCurrentState} />
                 <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>
                 <li class="list-item"><div class="css iconRow slashContainer"><i class="fab fa-css3-alt"></i> <span class="slashes">//</span> CSS</div></li>
                 <li class="list-item"><div class="sass iconRow slashContainer"><i class="fab fa-sass"></i> <span class="slashes">//</span> SASS</div></li>

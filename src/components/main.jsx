@@ -8,9 +8,11 @@ import Contact from './States/contact';
 import Footer from './Footer/footer';
 import Avatar from './Avatar/avatar';
 
-function Main() { 
+function Main(initialState) { 
 
-        const [currentState, setCurrentState] = useState('homePage');
+        initialState = `aboutPage`;
+
+        const [currentState, setCurrentState] = useState(initialState);
         const changeCurrentState = (state) => setCurrentState(state);
 
         const handleState = () => {
