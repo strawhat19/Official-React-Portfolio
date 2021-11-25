@@ -1,0 +1,121 @@
+.avatar {
+  height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Montserrat';
+  font-weight: 300 !important;
+  font-size: 13px;
+  grid-gap: 10px;
+  z-index: 1;
+  position: relative;
+  top: -8.6em;
+  right: -54.2em;
+  width: 30%;
+}
+
+@media (max-width: 1536px) {
+  .avatar .avatar {
+    top: -9.65em;
+  }
+  .avatar .avatar:nth-child(2) {
+    top: 34px;
+  }
+}
+
+.avatar .bioPic {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 230%;
+  width: 95%;
+}
+
+.avatar .bioPic::before {
+  position: absolute;
+  background: #d90000;
+  width: 100%;
+  height: 100%;
+  z-index: 5 !important;
+  top: 0%;
+  left: 0;
+  -webkit-clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+          clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
+
+.avatar .bioPic::after {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  top: 0px;
+  left: 0;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.avatar::before {
+  content: '';
+  position: absolute;
+  background: var(--react);
+  width: 100.2%;
+  height: 140%;
+  z-index: -1;
+  top: -10px;
+  left: -28px;
+  -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 12% 100%);
+          clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 12% 100%);
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  background: var(--react);
+  width: 100.5%;
+  height: 130%;
+  z-index: -1;
+  top: 69px;
+  left: -30px;
+  -webkit-clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
+          clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
+}
+
+.avatar:nth-child(2) {
+  position: absolute;
+  top: 47px;
+  left: 667px;
+  width: 33%;
+  -webkit-transform: scale(0.888) rotate(-0.1deg);
+          transform: scale(0.888) rotate(-0.1deg);
+}
+
+.avatar:nth-child(2) .bioPic {
+  background: url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/4b9ecdf3331d8f8cb8fa97a6387f508d9159466e/public/assets/rickyPics/RickySignfull.svg);
+  background-size: 100% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat;
+  height: 265%;
+  margin-top: -0.6em;
+  -webkit-transition: 300ms ease-in-out !important;
+  transition: 300ms ease-in-out !important;
+}
+
+.avatar:nth-child(2)::before {
+  background: transparent;
+  top: -9px;
+}
+
+.avatar:nth-child(2)::after {
+  background: transparent;
+}
+/*# sourceMappingURL=avatar.css.map */
