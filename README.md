@@ -17,7 +17,8 @@ Clone the repo, npm install then node index.js.
 
 ## Usage
 This is a portfolio made in React.js to showcase skills and understanding of React state management and components.
-#### https://rakib-ahmed-react-portfolio.herokuapp.com/
+#### https://rahmedportfolio.herokuapp.com/
+#### https://rakib-ahmed-react-portfolio.herokuapp.com/ (Deprecated || Stopped Working)
 #### https://strawhat19.github.io/React-Portfolio/ (Deprecated)
 
 ## Contributing
