@@ -3,7 +3,7 @@ import ColorChange from './colorChange';
 import Project from './project';
 
 // Custom User Object
-class GithubUser {
+class User {
     constructor(name,url,bio,projects,blog,avatar,login,repoNum,repoLink,starred,followers,following) {
         this.name = name;
         this.url = url;
@@ -52,10 +52,9 @@ class Repository {
 export default class Portfolio extends React.Component {
 
     state = {
-        repoFilter: `sass`,
-        user: [],
+        github: ``,
         projects: [],
-        githubUser: {}
+        repoQuery: `sass`
     }
 
     async componentDidMount() {
@@ -65,9 +64,9 @@ export default class Portfolio extends React.Component {
         const responseRepos = await fetch(repoURL);
         const response = await fetch(githubURL);
         const githubRepos = await responseRepos.json();
-        const githubUser = await response.json();
-        const {name,html_url,bio,blog,avatar_url,login,public_repos,repos_url,starred_url,followers,following} = githubUser;
-        const pinnedRepos = githubRepos.filter(repo => repo.topics.includes(this.state.repoFilter));
+        const github = await response.json();
+        const {name,html_url,bio,blog,avatar_url,login,public_repos,repos_url,starred_url,followers,following} = github;
+        const pinnedRepos = githubRepos.filter(repo => repo.topics.includes(this.state.repoQuery));
         pinnedRepos.map(repo => {
             const {name,html_url,created_at,owner,topics,license,updated_at,deployments_url,language,homepage,description} = repo;
             const filteredRepo = new Repository(name,html_url,created_at,owner,topics,license,updated_at,deployments_url,language,homepage,description);
@@ -75,25 +74,28 @@ export default class Portfolio extends React.Component {
                 projects: [...previousState.projects, filteredRepo]
             }));
         })
-        const userInfo = new GithubUser(name,html_url,bio,this.state.projects,blog,avatar_url,login,public_repos,repos_url,starred_url,followers,following);
-        this.setState({ githubUser : userInfo});
-        console.log(this.state.githubUser);
+        const userInfo = new User(name,html_url,bio,this.state.projects,blog,avatar_url,login,public_repos,repos_url,starred_url,followers,following);
+        this.setState({ github : userInfo});
+        console.log(`App State:`);
+        console.log(this.state);
     }
 
     render() {
-        let user = this.state.githubUser;
+        let user = this.state.github;
         let projects = this.state.projects;
         return (
         <div id="contentContainer" class="contentContainer contain portfolio">
             <ColorChange />
             <div class="content">
                 <div class="lineSep"></div>
-                <h2 id="grabLabel" class="portfolioPage">Portfolio State</h2>
-                <p class="spacer">Here is my Portfolio. Github: {user.name}</p>
-                <ul class="list-group projectsContainer">
-                    {projects.map((project,index) => <Project index={index} project={project} />)}
-                </ul>
-                <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
+                <h2><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
+                <p class="spacer">Here is {user.name}'s' Pinned Github Projects:</p>
+                <h2><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
+                <div class="list-group projectsContainer">
+                    {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
+                </div>
+                
+                {/* <button class="gameButton transition"><i class="fab fa-github"></i> Github</button> */}
             </div>
         </div>
         );

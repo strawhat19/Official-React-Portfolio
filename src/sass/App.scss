@@ -398,7 +398,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .content .lineSep {
-  width: 84%;
+  width: 81.5%;
 }
 
 p.spacer {
@@ -466,6 +466,10 @@ h1 {
   font-weight: 500;
 }
 
+.skinny {
+  font-weight: 300;
+}
+
 .lineSep {
   height: 0.1px;
   margin: 0.4em 0 0.2em;
@@ -510,6 +514,32 @@ span, p {
     min-height: 150px;
     height: 150px;
     max-height: 300px;
+}
+
+.projectsContainer {
+  font-size: 12px;
+  min-height: 200px;
+  max-width: 860px;
+  display: flex;
+  flex-wrap: wrap;
+  .project {
+    display: flex;
+    width: 60%;
+    h2 {
+      font-weight: 300 !important;
+      font-family: 'Montserrat';
+      font-size: 1.3em;
+      width: auto;
+      display: flex !important;
+      justify-content: flex-start;
+      grid-gap: 0.6em;
+      align-items: center;
+    }
+  }
+}
+
+.giticon {
+  font-size: 1.3em;
 }
 
 .gameButton {

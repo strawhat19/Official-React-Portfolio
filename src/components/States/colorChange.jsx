@@ -61,8 +61,8 @@ function ColorChange({currentState, changeCurrentState}) {
                 </h1>
             </div>
             <div class="iconContainer outerIconContainer">
-                <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>
+                <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
             </div>
         </div>
     );
