@@ -3,8 +3,8 @@ A portfolio created with React state and components.
 
 ![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Screenshot of Application | Developer Mode](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/develeporMode.JPG)
-![Screenshot of Application | Designer Mode](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/designMode.JPG)
+![Screenshot of Application | Developer Mode](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/develeporMode2.JPG)
+![Screenshot of Application | Designer Mode](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/designMode2.JPG)
 
 ## **Table of Contents**
 * [Installation](#installation)
