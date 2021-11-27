@@ -87,6 +87,26 @@ body {
   transition: 300ms ease-in-out;
 }
 
+::-webkit-scrollbar {
+  width: 10px !important;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--react);
+  border-radius: 100px;
+  border: 0px solid #fff;
+  border-right: none;
+  border-left: none;
+  -webkit-transition: 500ms ease-in-out !important;
+  transition: 500ms ease-in-out !important;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: transparent;
+}
+
 a i {
   color: var(--react);
 }
@@ -142,6 +162,11 @@ a:hover {
   top: 0;
   animation: rotate 15s linear infinite alternate;
   margin-top: -7em;
+  @media (max-width: 1536px) {
+    width: 30%;
+    right: 15px;
+    margin-top: 2em;
+  }
 }
 
 main {
@@ -395,10 +420,14 @@ input[type=range]::-webkit-slider-thumb {
 
 .content {
   width: 93%;
-}
-
-.content .lineSep {
-  width: 81.5%;
+  overflow: hidden auto;
+  .lineSep {
+    width: 100%;
+  }
+  @media (max-width: 1536px) {
+    width: 75%;
+    height: 300px !important;
+  }
 }
 
 p.spacer {
@@ -522,6 +551,13 @@ span, p {
   max-width: 860px;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1536px) {
+    font-size: 12px;
+    min-height: 200px;
+    max-width: 715px;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .project {
     display: flex;
     width: 60%;

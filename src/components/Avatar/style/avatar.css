@@ -23,11 +23,10 @@
 }
 
 @media (max-width: 1536px) {
-  .avatar .avatar {
-    top: -9.65em;
-  }
-  .avatar .avatar:nth-child(2) {
-    top: 34px;
+  .avatar {
+    top: -9.64em !important;
+    right: -49.2em;
+    width: 40% !important;
   }
 }
 
@@ -38,30 +37,6 @@
   left: 0;
   height: 230%;
   width: 95%;
-}
-
-.avatar .bioPic::before {
-  position: absolute;
-  background: #d90000;
-  width: 100%;
-  height: 100%;
-  z-index: 5 !important;
-  top: 0%;
-  left: 0;
-  -webkit-clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
-          clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
-}
-
-.avatar .bioPic::after {
-  position: absolute;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  top: 0px;
-  left: 0;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .avatar::before {
@@ -99,6 +74,13 @@
           transform: scale(0.888) rotate(-0.1deg);
 }
 
+@media (max-width: 1536px) {
+  .avatar:nth-child(2) {
+    -webkit-transform: scale(1) rotate(-0.1deg);
+            transform: scale(1) rotate(-0.1deg);
+  }
+}
+
 .avatar:nth-child(2) .bioPic {
   background: url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/4b9ecdf3331d8f8cb8fa97a6387f508d9159466e/public/assets/rickyPics/RickySignfull.svg);
   background-size: 100% !important;
@@ -108,6 +90,15 @@
   margin-top: -0.6em;
   -webkit-transition: 300ms ease-in-out !important;
   transition: 300ms ease-in-out !important;
+}
+
+@media (max-width: 1536px) {
+  .avatar:nth-child(2) .bioPic {
+    margin-top: 11.3em;
+    left: -2.9em;
+    -webkit-transform: scale(0.95, 0.9);
+            transform: scale(0.95, 0.9);
+  }
 }
 
 .avatar:nth-child(2)::before {

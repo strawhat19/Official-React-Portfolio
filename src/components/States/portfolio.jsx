@@ -89,13 +89,13 @@ export default class Portfolio extends React.Component {
             <div class="content">
                 <div class="lineSep"></div>
                 <h2><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
-                <p class="spacer">Here is {user.name}'s' Pinned Github Projects:</p>
+                <p class="spacer">Here is {user.name || `Rakib Ahmed`}'s' Pinned Github Projects:</p>
                 <h2><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
-                <div class="list-group projectsContainer">
+                <div class="projectsContainer list-group">
                     {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
                 </div>
                 
-                {/* <button class="gameButton transition"><i class="fab fa-github"></i> Github</button> */}
+                <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
             </div>
         </div>
         );

@@ -1,14 +1,8 @@
 import React from 'react';
 export default class Project extends React.Component {
-
-    async componentDidMount() {
-        // Enter code for after this component mounts here
-    }
-
     render(project,index) {
         project = this.props.project;
         index = this.props.index + 1;
-
         const returnIcon = (language) => {
             switch(language) {
                 default:
@@ -23,11 +17,10 @@ export default class Project extends React.Component {
                     return <div class="css iconRow slashContainer"><i class="fab fa-css3-alt"></i> <span class="slashes">//</span> CSS</div>;
             }
         }
-
         return (
             <a href={project.url} title={project.name + ` Project`} target="_blank" class="project iconRow slashContainer">
                 <h2 id="projectLabel" class="portfolioProject">
-                    {index} <span class="slashes">//</span> {project.name} <span class="slashes">//</span> {returnIcon(project.language)}
+                    {index} <span class="slashes">//</span> {project.name || `Project Name`} <span class="slashes">//</span> {returnIcon(project.language)}
                 </h2>
             </a>
         )
