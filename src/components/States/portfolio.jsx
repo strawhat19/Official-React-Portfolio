@@ -1,6 +1,7 @@
 import React from 'react';
 import ColorChange from './colorChange';
 import Project from './project';
+import SkillsList from './skillsList';
 
 // Custom User Object
 class User {
@@ -84,16 +85,18 @@ export default class Portfolio extends React.Component {
         return (
         <div id="contentContainer" class="contentContainer contain portfolio">
             <ColorChange />
-            <div class="content">
-                <div class="lineSep"></div>
-                <h2><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
-                <p class="spacer">Here is {user.name || `Rakib Ahmed`}'s' Pinned Github Projects:</p>
-                <h2><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
-                <div class="projectsContainer list-group">
-                    {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
+            <div class="content rtl">
+                <div className={`innerContent ltr`}>
+                    <h2 className={`react`}><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
+                    <p class="spacer">Here is {user.name || `Rakib Ahmed`}'s' Pinned Github Projects:</p>
+                    <h2 className={`react`}><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
+                    <div class="projectsContainer list-group">
+                        {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
+                    </div>
+                    <h2 className={`react`}><i class="fas fa-list-ul"></i> <span class="slashes">//</span> <span class="skinny">My</span> Skills</h2>
+                    <SkillsList />
+                    <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
                 </div>
-                
-                <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
             </div>
         </div>
         );

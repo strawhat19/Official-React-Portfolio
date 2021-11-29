@@ -29,6 +29,7 @@
   --mongo: #00684a;
   --git: #e94e31;
   --swift: #f4993a;
+  --figma: #b659ff;
 }
 
 .black, ::selection, #animation path[fill="rgb(15,204,206)"], footer, .contentContainer, .customIcon, .gameButton:hover {
@@ -88,7 +89,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px !important;
+  width: 3px !important;
   background: transparent;
 }
 
@@ -302,6 +303,10 @@ main {
   background: var(--react);
 }
 
+.figma i {
+  color: var(--figma);
+}
+
 /* Input Range */
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -420,14 +425,24 @@ input[type=range]::-webkit-slider-thumb {
 
 .content {
   width: 93%;
-  overflow: hidden auto;
+  height: 435px;
+  overflow: hidden auto !important;
+  padding-left: 1em;
   .lineSep {
-    width: 100%;
+    width: 81%;
   }
   @media (max-width: 1536px) {
     width: 75%;
     height: 300px !important;
   }
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
 }
 
 p.spacer {
@@ -442,7 +457,9 @@ p.spacer {
   align-items: center;
   grid-gap: 45px;
   width: 75%;
-  @media (max-width: 1536px) { // Laptop
+  border-bottom: 2px solid var(--react);
+  margin-bottom: 1em;
+  @media (max-width: 1536px) {
     font-size: .75em !important;
   }
 }
@@ -512,7 +529,7 @@ h1 {
 h2 {
   font-weight: 500 !important;
   font-style: italic;
-  border-bottom: 1px solid var(--react);
+  border-bottom: 2px solid var(--react);
   display: inline-block;
   padding: 0.3em 0.3em 0.3em;
   @media (max-width: 1536px) { // Laptop
@@ -581,6 +598,8 @@ span, p {
 .gameButton {
   padding: 0.55em;
   width: 95%;
+  margin-bottom: 2em;
+  margin-left: 1em !important;
   display: block;
   float: none;
   clear: both;
@@ -594,9 +613,8 @@ span, p {
   letter-spacing: .1em;
   text-transform: uppercase;
   font-size: 0.7em;
-  /* transform: skewY(-2deg); */
-  transform: skewx(
--20deg);
+  font-weight: 500 !important;
+  transform: skewx(-20deg);
 }
 
 .gameButton:hover {
