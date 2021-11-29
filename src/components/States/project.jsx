@@ -8,7 +8,11 @@ export default class Project extends React.Component {
                 default:
                     return <div class="react iconRow slashContainer"><i class="fab fa-react"></i> <span class="slashes">//</span> React</div>;
                 case `JavaScript`:
-                    return <div class="js iconRow slashContainer"><i class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div>;
+                    if (project.topics.includes(`react`)) {
+                        return <div class="react iconRow slashContainer"><i class="fab fa-react"></i> <span class="slashes">//</span> React</div>;
+                    } else {
+                        return <div class="js iconRow slashContainer"><i class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div>;
+                    }
                 case `SCSS`:
                     return <div class="sass iconRow slashContainer"><i class="fab fa-sass"></i> <span class="slashes">//</span> SASS</div>;
                 case `HTML`:

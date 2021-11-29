@@ -8,9 +8,9 @@ import Contact from './States/contact';
 import Footer from './Footer/footer';
 import Avatar from './Avatar/avatar';
 
-function Main(initialState) { 
+function Main() { 
 
-        initialState = `aboutPage`;
+        let initialState = `aboutPage`;
 
         const [currentState, setCurrentState] = useState(initialState);
         const changeCurrentState = (state) => setCurrentState(state);

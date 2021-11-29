@@ -7,7 +7,7 @@ function About({currentState, changeCurrentState}) {
         <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
-            <h2 id="grabLabel" class="aboutPage">About State</h2>
+            <h2><i class="fas fa-address-card"></i> <span class="slashes">//</span> <span class="skinny">About</span> Me</h2>
             <p class="spacer">Hey I'm Rakib Ahmed, but you can call me Ricky! I launched my first professional website in 2016. I Designed & Developed it for a prominent client in the entertainment industry. I was 19 years old… A lot has changed since then…</p>
             <ul class="list-group">
                 <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>

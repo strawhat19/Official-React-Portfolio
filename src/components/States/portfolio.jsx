@@ -54,7 +54,7 @@ export default class Portfolio extends React.Component {
     state = {
         github: ``,
         projects: [],
-        repoQuery: `sass`
+        repoQuery: `javascript`
     }
 
     async componentDidMount() {
@@ -76,8 +76,6 @@ export default class Portfolio extends React.Component {
         })
         const userInfo = new User(name,html_url,bio,this.state.projects,blog,avatar_url,login,public_repos,repos_url,starred_url,followers,following);
         this.setState({ github : userInfo});
-        console.log(`App State:`);
-        console.log(this.state);
     }
 
     render() {
