@@ -2,6 +2,10 @@ import React from 'react';
 
 function ColorChange({currentState, changeCurrentState}) {
 
+    function homeState() {
+        changeCurrentState('homePage');
+    }
+
     const handleColorChange = (bodyBG) => {
 
         bodyBG = document.body.className;
@@ -50,16 +54,17 @@ function ColorChange({currentState, changeCurrentState}) {
                 element.style.background = '#000';
             })
         }
+
     }
 
     return (
         <div class="contentContainerTitle">
-            <div class="homePage">
+            <a class="homePage" onClick={() => homeState()} title={`Home Page`}>
                 <h1 class="spacer homePage">
                     <i class="fab fa-react"></i> | React 
                     <span class="boldSecondary"> Portfolio</span>
                 </h1>
-            </div>
+            </a>
             <div class="iconContainer outerIconContainer">
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>

@@ -89,7 +89,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 3px !important;
+  width: 2px !important;
   background: transparent;
 }
 
@@ -114,9 +114,13 @@ a i {
 
 a {
   color: white !important;
-  font-family: Noto Sans JP;
+  font-family: 'Montserrat' !important;
   text-decoration: none;
   font-weight: 300 !important;
+}
+
+span {
+  font-family: 'Montserrat' !important;
 }
 
 a:hover {
@@ -425,9 +429,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .content {
   width: 93%;
-  height: 435px;
+  height: 460px;
   overflow: hidden auto !important;
-  padding-left: 1em;
+  padding-left: 2em;
+  margin-left: -2em;
   .lineSep {
     width: 81%;
   }
@@ -443,6 +448,65 @@ input[type=range]::-webkit-slider-thumb {
 
 .ltr {
   direction: ltr;
+}
+
+.navButtons {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  font-family: 'Montserrat' !important;
+  .navButton {
+    width: 20%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skewx(-20deg);
+    transition: 150ms ease-in-out;
+    border: solid 3px var(--react);
+    margin: 1em 0;
+    font-family: 'Montserrat' !important;
+    i {
+      font-size: 1.5em;
+      transition: 150ms ease-in-out;
+    }
+    .innerContent {
+      display: flex;
+      padding: 1em;
+      grid-gap: 1em;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: skewx(20deg);
+      transition: 150ms ease-in-out;
+      font-family: 'Montserrat' !important;
+    }
+    &:hover {
+      i {
+        color: black;
+      }
+      background: var(--react) !important;
+      color: black !important;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 150ms ease-in-out;
+      span {
+        color: black !important;
+        font-weight: 500 !important;
+        transition: 150ms ease-in-out;
+      }
+    }
+  }
+}
+
+.portfolio .navButtons {
+  margin: 1em 0 .3em 0;
+}
+
+.buttonImage {
+  width: 35%;
 }
 
 p.spacer {

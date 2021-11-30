@@ -88,7 +88,28 @@ export default class Portfolio extends React.Component {
             <div class="content rtl">
                 <div className={`innerContent ltr`}>
                     <h2 className={`react`}><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
-                    <p class="spacer">Here is {user.name || `Rakib Ahmed`}'s' Pinned Github Projects:</p>
+                    <div className={`navButtons`}>
+                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
+                            <span className={`innerContent`}>
+                                <img className={`buttonImage`} src="https://raw.githubusercontent.com/d4nnyq88/tune-time/main/public/images/Tune-Time-Cropped-Green.png" /> Tune Time    
+                            </span>
+                        </a>
+                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
+                            <span className={`innerContent`}>
+                                <img className={`buttonImage`} src="https://strawhat19.github.io/Portfolio/assets/images/graphics/Asset-2Icon-VLight-Greenofficial.png" /> Dyer & Posta    
+                            </span>
+                        </a>
+                        <a className="navButton" title="Piratechs" href="https://piratechs.com/" target="_blank">
+                            <span className={`innerContent`}>
+                                <img className={`buttonImage`} src="..../public/assets/PiratechsLogoreactColor.svg" /> Piratechs        
+                            </span>
+                        </a>
+                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
+                            <span className={`innerContent`}>
+                                <img className={`buttonImage`} src="https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/graphics/Sanctuary-Art.png" /> Sanctuary
+                            </span>
+                        </a>
+                    </div>
                     <h2 className={`react`}><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
                     <div class="projectsContainer list-group">
                         {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}

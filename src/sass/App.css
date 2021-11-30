@@ -114,7 +114,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 3px !important;
+  width: 2px !important;
   background: transparent;
 }
 
@@ -139,9 +139,13 @@ a i {
 
 a {
   color: white !important;
-  font-family: Noto Sans JP;
+  font-family: 'Montserrat' !important;
   text-decoration: none;
   font-weight: 300 !important;
+}
+
+span {
+  font-family: 'Montserrat' !important;
 }
 
 a:hover {
@@ -561,9 +565,10 @@ input[type=range]::-webkit-slider-thumb {
 
 .content {
   width: 93%;
-  height: 435px;
+  height: 460px;
   overflow: hidden auto !important;
-  padding-left: 1em;
+  padding-left: 2em;
+  margin-left: -2em;
 }
 
 .content .lineSep {
@@ -583,6 +588,102 @@ input[type=range]::-webkit-slider-thumb {
 
 .ltr {
   direction: ltr;
+}
+
+.navButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+  font-family: 'Montserrat' !important;
+}
+
+.navButtons .navButton {
+  width: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: skewx(-20deg);
+          transform: skewx(-20deg);
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  border: solid 3px var(--react);
+  margin: 1em 0;
+  font-family: 'Montserrat' !important;
+}
+
+.navButtons .navButton i {
+  font-size: 1.5em;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+.navButtons .navButton .innerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  grid-gap: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: skewx(20deg);
+          transform: skewx(20deg);
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  font-family: 'Montserrat' !important;
+}
+
+.navButtons .navButton:hover {
+  background: var(--react) !important;
+  color: black !important;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+.navButtons .navButton:hover i {
+  color: black;
+}
+
+.navButtons .navButton:hover span {
+  color: black !important;
+  font-weight: 500 !important;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+
+.portfolio .navButtons {
+  margin: 1em 0 .3em 0;
+}
+
+.buttonImage {
+  width: 35%;
 }
 
 p.spacer {

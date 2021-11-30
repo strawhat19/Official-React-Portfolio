@@ -4,20 +4,26 @@ function Navigation({currentState, changeCurrentState}, classes) {
 
     classes = `black ${currentState}`;
 
-    function homeState() {
+    function homeState(animation) {
         changeCurrentState('homePage');
+        animation = document.querySelector(`#animation`);
     }
-    function aboutState() {
+    function aboutState(animation) {
         changeCurrentState('aboutPage');
+        animation = document.querySelector(`#animation`);
+        animation.classList.add(`aboutAnimation`);
     }
-    function portfolioState() {
+    function portfolioState(animation) {
         changeCurrentState('portfolioPage');
+        animation = document.querySelector(`#animation`);
     }
-    function contactState() {
+    function contactState(animation) {
         changeCurrentState('contactPage');
+        animation = document.querySelector(`#animation`);
     }
-    function resumeState() {
+    function resumeState(animation) {
         changeCurrentState('resumePage');
+        animation = document.querySelector(`#animation`);
     }
 
     return (
